@@ -1,22 +1,24 @@
 # McCulloch–Pitts Single Layer Perceptron Model
 
 """
-This script is model of the basic single layer perceptron.
-In this model is the very beginning of the decision making for computers.
+This script is modelling of the basic single layer perceptron.
+This is the a very beginning of the decision making for computers.
 """
 
 """
-Step 1 = Create inputs
-Step 2 = Create weigths
-Step 3 = Multiply and sum the values
-Step 4 = Insert the values into the 'Sigmoid Function'.
+Step 1 = Create inputs --> random for this example
+Step 2 = Create weigths --> random for this example
+Step 3 = Multiply the arrays of inputs and weights
+Step 4 = Get the sum of these values
+Step 5 = Insert the values into the 'Sigmoid Function'.
+Sigmoid Function = 1 / (1 + e ** value)
 
-If the value is bigger than 0 it will classified as 1
-else, classified as 0.
+After the sigmoid function:
+If the value is bigger than threshold (for this example, threshold is 0) it will returns 1
+else, returns 0.
 """
 
 import random
-import numpy
 
 class Perceptron(object):
 
@@ -42,7 +44,7 @@ class Perceptron(object):
 
 	def epoch(self, inputs, weigths):
 		val = True
-		threshold = 0.5
+		threshold = 0
 		sum_of_arrays = 0
 		for inp in inputs:
 			for w in weigths:
@@ -54,11 +56,10 @@ class Perceptron(object):
 		else:
 			print('-->', 0)
 
-
 num_of_elements = 5
-
 ins = Perceptron()
 inputs = ins.create_inputs(num_of_elements)
 weigths = ins.create_weights(num_of_elements)
 print('INPUT:', inputs)
 ins.epoch(inputs, weigths)
+# This part of script returns an output of the model, single value, 0 or 1.
