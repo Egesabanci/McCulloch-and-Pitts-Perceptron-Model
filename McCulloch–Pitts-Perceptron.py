@@ -37,7 +37,7 @@ class Perceptron(object):
 		return weights_list
 
 	def sigmoid(self, value):
-		# 'e' value is the constant for the sigmoid function
+		# 'e' value is constant
 		e = 2.718281828459045
 		sigmoid = 1 / (1 + e ** value)
 		return sigmoid
