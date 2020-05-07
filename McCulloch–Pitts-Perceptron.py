@@ -10,10 +10,8 @@ Step 1 = Create inputs --> random for this example (between -1 and 1)
 Step 2 = Create weigths --> random for this example (between 0 and 1)
 Step 3 = Multiply the arrays of inputs and weights
 Step 4 = Get the sum of these values
-Step 5 = Insert the values into the 'Sigmoid Function'.
-Sigmoid Function = 1 / (1 + e ** value)
+Step 5 = Insert the values into Threshold value
 
-After the sigmoid function:
 If the value is bigger than threshold (for this example, threshold is 0) it will returns 1
 else, returns 0.
 """
