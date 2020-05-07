@@ -35,12 +35,13 @@ class Perceptron(object):
 		return weights_list
 
 	def epoch(self, inputs, weigths):
+		self.inputs = inputs
+		self.weights = weights
 		val = True
 		threshold = 0
 		sum_of_arrays = 0
-		for inp in inputs:
-			for w in weigths:
-				sum_of_arrays += inp * w
+		for i in range(len(self.inputs)):
+			sum_of_arrays += self.inputs[i] * self.weights[i] 
 		print(f'OUTPUT: {round(sum_of_arrays, 5)}')
 		if sum_of_arrays > threshold:
 			print('-->', 1)
