@@ -36,12 +36,6 @@ class Perceptron(object):
 			weights_list.append(weigth)
 		return weights_list
 
-	def sigmoid(self, value):
-		# 'e' value is constant
-		e = 2.718281828459045
-		sigmoid = 1 / (1 + e ** value)
-		return sigmoid
-
 	def epoch(self, inputs, weigths):
 		val = True
 		threshold = 0
@@ -49,9 +43,8 @@ class Perceptron(object):
 		for inp in inputs:
 			for w in weigths:
 				sum_of_arrays += inp * w
-		value = self.sigmoid(sum_of_arrays)
-		print(f'OUTPUT: {round(value, 5)}')
-		if value > threshold:
+		print(f'OUTPUT: {round(sum_of_arrays, 5)}')
+		if sum_of_arrays > threshold:
 			print('-->', 1)
 		else:
 			print('-->', 0)
