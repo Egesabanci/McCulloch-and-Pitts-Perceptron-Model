@@ -1,7 +1,7 @@
 # McCulloch–Pitts Single Layer Perceptron Model
 
 """
-This script is modelling of the basic single layer perceptron.
+This script is model of the basic single layer perceptron.
 This is the a very beginning of the decision making for computers.
 """
 
