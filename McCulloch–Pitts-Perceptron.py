@@ -21,17 +21,11 @@ import random
 class Perceptron(object):
 
 	def create_inputs(self, number_of_inputs):
-		input_list = []
-		for _ in range(number_of_inputs):
-			number = random.uniform(-1, 1)
-			input_list.append(number)
+		input_list = [random.uniform(-1, 1) for _ in range(number_of_inputs)]
 		return input_list
 
 	def create_weights(self, number_of_weights):
-		weights_list = []
-		for _ in range(number_of_weights):
-			weigth = random.uniform(0, 1)
-			weights_list.append(weigth)
+		weights_list = [random.uniform(0, 1) for _ in range(number_of_weights)]
 		return weights_list
 
 	def epoch(self, inputs, weigths):
