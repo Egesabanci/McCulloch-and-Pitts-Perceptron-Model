@@ -2,7 +2,7 @@
 
 """
 This script is model of the basic single layer perceptron.
-This is the a very beginning of the decision making for computers.
+This is a very beginning of the decision making for computers.
 """
 
 """
