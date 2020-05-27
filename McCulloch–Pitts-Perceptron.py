@@ -31,7 +31,6 @@ class Perceptron(object):
 	def step(self, inputs, weigths):
 		self.inputs = inputs
 		self.weights = weights
-		val = True
 		threshold = 0
 		sum_of_arrays = 0
 		for i in range(len(self.inputs)):
