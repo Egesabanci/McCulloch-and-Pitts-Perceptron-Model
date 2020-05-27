@@ -28,7 +28,7 @@ class Perceptron(object):
 		weights_list = [random.uniform(0, 1) for _ in range(number_of_weights)]
 		return weights_list
 
-	def epoch(self, inputs, weigths):
+	def step(self, inputs, weigths):
 		self.inputs = inputs
 		self.weights = weights
 		val = True
@@ -47,5 +47,5 @@ ins = Perceptron()
 inputs = ins.create_inputs(num_of_elements)
 weigths = ins.create_weights(num_of_elements)
 print('INPUT:', inputs)
-ins.epoch(inputs, weigths)
+ins.step(inputs, weigths)
 # This part of script returns an output of the model, single value, 0 or 1.
